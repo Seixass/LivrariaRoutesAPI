@@ -1,18 +1,12 @@
-import { Router } from "express";
+import express from 'express';
+import { getFuncionario, cadastrarFuncionario, getOneFuncionario, editarFuncionario, deletarFuncionario } from '../controllers/funcionarioController.js';
 
-import { getFuncionario, cadastrarFuncionario, getOneFuncionario, editarFuncionario } from "../controllers/funcionarioController.js";
+const router = express.Router();
 
-const router = Router();
-
-router.get("/", getFuncionario);
-
-router.post("/criar", cadastrarFuncionario);
-
-router.get("/:id", getOneFuncionario);
-
-router.put("/editar/:id", editarFuncionario);
-
-// router.delete("/remover/:id", deletarFuncionario);
-
+router.get('/funcionarios', getFuncionario);
+router.post('/funcionarios', cadastrarFuncionario);
+router.get('/funcionarios/:id', getOneFuncionario);
+router.put('/funcionarios/:id', editarFuncionario);
+router.delete('/funcionarios/:id', deletarFuncionario);
 
 export default router;

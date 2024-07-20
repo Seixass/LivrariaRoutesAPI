@@ -1,6 +1,6 @@
 import "dotenv/config";
 import express from "express";
-import conn from "./config/conn.js";
+
 import "./models/livroModel.js";
 import "./models/funcionariosModel.js";
 
