@@ -2,7 +2,7 @@ import conn from "../config/conn.js"
 
 const tableLivros = /*sql*/`
     CREATE TABLE IF NOT EXISTS livros(
-        id VARCHAR(255) PRIMARY KEY,
+        livro_id VARCHAR(255) PRIMARY KEY,
         titulo VARCHAR(255) NOT NULL,
         autor VARCHAR(255) NOT NULL,
         ano_publicacao YEAR(4) NOT NULL,
